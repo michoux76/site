@@ -1,2 +1,2 @@
-title: My other awesome post
-redirect_from: /
+permalink: /test/
+redirect_to:  /
