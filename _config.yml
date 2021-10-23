@@ -6,7 +6,5 @@
 
 permalink: /:slug/
 
-plugins:
-  - jekyll-default-layout
 
 #repository: hlaueriksson/jekyll-url-shortener
