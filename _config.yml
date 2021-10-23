@@ -27,6 +27,7 @@ defaults:
 # How article URLs are structured.
 # See: https://jekyllrb.com/docs/permalinks/
 permalink: posts/:title/
+redirects: yes
 
 # Language. For example, if you write in Japanese, use "ja"
 lang: "en"
