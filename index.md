@@ -1,7 +1,6 @@
 ---
-layout: post
-redirects:
-    - /
+layout: default
+redirect_from:
     - /index.html
     - /foo
     - /bar
