@@ -1,9 +1,9 @@
 ---
 layout: default
-redirect_from:
-    /
-    /index.html
-    /foo
-    /bar
+redirects:
+    - /
+    - /index.html
+    - /foo
+    - /bar
 title: Home
 ---
