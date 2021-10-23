@@ -1,5 +1,9 @@
 ---
 layout: default
-permalink: /index.html
+permalink:
+    /
+    /index.html
+    /foo
+    /bar
 title: Home
 ---
