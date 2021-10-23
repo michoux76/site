@@ -2,7 +2,7 @@
 # Customize Options: Must Change
 #
 # Title:
-title: Duo, A Simple Jekyll Theme
+title: MichouxGifts
 
 # Where the page will be deployed.
 # If it's https://foo.com/bar, just write "https://foo.com"
@@ -22,19 +22,11 @@ defaults:
     values:
       image: "static/images/og.jpg"
 
-# ----------------------------------------------------------------------------
-# Customize Options: Optional
-#
-# See: https://material.io/guidelines/style/color.html
-# Use color-name-value, like pink-200 or deep-purple-100
-brand_color: "amber-400"
+
 
 # How article URLs are structured.
 # See: https://jekyllrb.com/docs/permalinks/
 permalink: posts/:title/
-
-# "UA-NNNNNNNN-N"
-google_analytics: ""
 
 # Language. For example, if you write in Japanese, use "ja"
 lang: "en"
