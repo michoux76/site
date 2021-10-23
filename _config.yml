@@ -4,7 +4,7 @@
 # google_analytics:
 # theme: jekyll-theme-minimal
 
-permalink: /:slug/
+permalink: /:slug
 
 
 #repository: hlaueriksson/jekyll-url-shortener
