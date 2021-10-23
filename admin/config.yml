@@ -1,0 +1,6 @@
+backend:
+  name: github
+  repo: michoux76/site # Path to your GitHub repository
+  # optional, defaults to master
+  # branch: main
+media_folder: 'uploads'
