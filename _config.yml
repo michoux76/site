@@ -55,3 +55,4 @@ plugins:
   - jekyll-seo-tag
   - jemoji
   - jekyll-readme-index
+  - jekyll-redirect-from
