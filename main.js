@@ -1,3 +1,35 @@
+function countDown() {
+
+    var countDownDate = new Date("2021-11-20T18:00:00.000Z").getTime();
+    // Get today's date and time
+    var now = new Date().getTime();
+  
+    // Find the distance between now and the count down date
+    var distance = countDownDate - now;
+  
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    let str;
+
+    if(days) {
+        str += days + "d"
+    }
+    if (hours) { str += " "+ hours + "h"}
+    if (minutes) { str += " "+ minutes + "m"}
+    if (seconds) { str += " "+ seconds + "s"}
+  
+    // If the count down is finished, write some text
+    if (distance < 0) {
+      return "EXPIRED";
+    } else {
+        return str
+    }
+  }
+
 var app = new Vue({
     el: '#app',
     data: {
@@ -40,11 +72,11 @@ var app = new Vue({
     watch: {
         time: function (d) {
             setTimeout(function () {
-                app.time = new Date(new Date("2021-11-20T18:00:00.000Z") - new Date().getTime()).toLocaleTimeString('en-US', { hour: '2-digit',minute: '2-digit',second: '2-digit', hour12: false })                
+                app.time = countDown()                
             },1000)
         }
     },
     created: function () {
-        this.time = new Date(new Date("2021-11-20T18:00:00.000Z") - new Date().getTime()).toLocaleTimeString('en-US', { hour: '2-digit',minute: '2-digit',second: '2-digit', hour12: false }) 
+        this.time = countDown() 
     }
 })
