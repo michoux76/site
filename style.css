@@ -7,23 +7,91 @@
 
 html, body {
     background: #000000;
-    color: purple;
+    color: #dd0083;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+a {
+    color: #dd0083 !important;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+header, footer {
+    flex: 0 0 auto;
+    text-align: center;
+}
+
+main {
+    /* flex: 1 1 auto; */
+    /* overflow: show; */
+    margin: auto 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.2;
+    margin: 0;
 }
 
 h1 {
-    color: #F2F2F2;
+    color: #dd0083;
     font-family: 'emo', Calibri, sans-serif;
+    text-align: center;
+}
+
+h2 {
+    margin: 0;
+    font-size: 2vw;
+    line-height: 1.2;
 }
 
 .title {
     list-style: none;
     padding: 0;
     margin: 0;
-    font-size: 1vw;
+    font-size: 6vw;
+    letter-spacing: 0.1em;
 }
 
 .title li {
     display: inline-block;
+}
+
+.title li:not(:first-of-type):not(:last-of-type) {
+    padding: 0 0.25em;
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 25px;
+    text-align: center;
+    margin: auto 25px;
+}
+
+.card {
+    box-shadow: 0 0 2px #dd0083;
+    padding: 25px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: color ease-in-out .2s, background-color ease-in-out .2s;
+}
+
+.card:hover {
+    background-color: #dd0083;
+    color: white
+}
+
+.card h3 {
+    font-family: 'Finger Paint', cursive;
 }

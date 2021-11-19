@@ -5,16 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>MichouGifts</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/style.css">
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
 </head>
 <body>
-    <h1>
-        <ul class="title">
-            <li>Twitch</li>
-            <li>Goes</li>
-            <li>Emo</li>
-        </ul>
-    </h1>
-    <h2>lineup</h2>
+    <div id="app">
+        <header>
+            <h1>
+                <ul class="title">
+                    <li>Twitch</li>
+                    <li>Goes</li>
+                    <li>Emo</li>
+                </ul>
+            </h1>
+            <h2>{{new Date(eventStart).toLocaleString('en-GB',{ weekday: 'short', month: 'short', day: 'numeric'})}} / {{new Date(eventEnd).toLocaleString('en-GB',{ weekday: 'short', month: 'short', day: 'numeric'})}}</h2>
+            <h4>20<span style="color: green">21 (puns)</span></h4>
+            <!-- <h2> the event will start in {{time}}</h2> -->
+        </header>
+        <main>
+            <div class="container">
+                <div class="card">
+                    <h3>THE RAID TRAIN</h3>
+                    <h3>STARTS IN {{time}}</h3>
+                </div>
+                <div class="card" v-for="name,time in schedule" @click="open(name)">
+                    <h3>{{name}}</h3>
+                    <h4><i>{{StringDate(time)}}</i></h4>
+                </div>
+            </div>
+        </main>
+        <footer><p>Created by Mich</p></footer>
+    </div>
+    <script src="/main.js"></script>
 </body>
 </html>
