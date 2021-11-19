@@ -16,3 +16,14 @@ h1 {
     color: #F2F2F2;
     font-family: 'emo', Calibri, sans-serif;
 }
+
+.title {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 1vw;
+}
+
+.title li {
+    display: inline-block;
+}
