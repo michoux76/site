@@ -15,12 +15,7 @@ function countDown() {
 
     var str = "THE RAID TRAIN <br>STARS IN ";
 
-    if(days) {
-        str += days + "d"
-    }
-    if (hours) { str += " "+ hours + "h"}
-    if (minutes) { str += " "+ minutes + "m"}
-    if (seconds) { str += " "+ seconds + "s"}
+    str += `${("00"+hours).slice(-2)}h ${("00"+minutes).slice(-2)}m ${("00"+seconds).slice(-2)}s`
   
     // If the count down is finished, write some text
     if (distance < 0) {
