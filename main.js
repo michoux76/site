@@ -13,7 +13,7 @@ function countDown() {
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    let str;
+    var str = "THE RAID TRAIN <br>STARS IN ";
 
     if(days) {
         str += days + "d"
@@ -24,9 +24,9 @@ function countDown() {
   
     // If the count down is finished, write some text
     if (distance < 0) {
-      return "EXPIRED";
+      return "STARTED";
     } else {
-        return str
+    return str
     }
   }
 
