@@ -1,5 +1,12 @@
+@font-face {
+    font-family: emo;
+    src: local("Vitruvian Man"),
+         url(/VitruvianMan-eW73.ttf);
+    font-weight: bold;
+  }
+
 html, body {
     background: #000000;
     color: purple;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'emo','Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
