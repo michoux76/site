@@ -2,34 +2,34 @@ var app = new Vue({
     el: '#app',
     data: {
         msg: 'Hello',
-        eventStart: 1637431200000,
-        eventEnd: 1637560800000,
+        eventStart: new Date("2021-11-20T18:00:00.000Z"),
+        eventEnd: new Date("2021-11-22T06:00:00.000Z"),
         time:'00:00:00',
         schedule: {
-            "1637431200000": "KELLYGATES47",
-            "1637438400000": "MATTWALDENAC",
-            "1637445600000": "CERIANMUSIC",
-            "1637452800000": "MEGANLENIUS",
-            "1637460000000": "ANDREWCORE",
-            "1637467200000": "FENWATERYEN",
-            "1637474400000": "LYRICALLEIA",
-            "1637481600000": "COLLEENDAUNCEYMUSIC",
-            "1637488800000": "SABYSPARK",
-            "1637496000000": "BOBCZAK",
-            "1637503200000": "ALANNA_MATTY",
-            "1637510400000": "TYLERLEVMUSIC",
-            "1637517600000": "JORDINLAINE",
-            "1637524800000": "ANNACARMELA",
-            "1637532000000": "JULIENBELHUMEUR",
-            "1637539200000": "GABISTREAMS",
-            "1637546400000": "SYDNEYPRAGUE",
-            "1637553600000": "JONLIMUSIC"
+            "2021-11-20T18:00:00.000Z":"KELLYGATES47",
+            "2021-11-20T20:00:00.000Z":"MATTWALDENAC",
+            "2021-11-20T22:00:00.000Z":"CERIANMUSIC",
+            "2021-11-21T00:00:00.000Z":"MEGANLENIUS",
+            "2021-11-21T02:00:00.000Z":"ANDREWCORE",
+            "2021-11-21T04:00:00.000Z":"FENWATERYEN",
+            "2021-11-21T06:00:00.000Z":"LYRICALLEIA",
+            "2021-11-21T08:00:00.000Z":"COLLEENDAUNCEYMUSIC",
+            "2021-11-21T10:00:00.000Z":"SABYSPARK",
+            "2021-11-21T12:00:00.000Z":"BOBCZAK",
+            "2021-11-21T14:00:00.000Z":"ALANNA_MATTY",
+            "2021-11-21T16:00:00.000Z":"TYLERLEVMUSIC",
+            "2021-11-21T18:00:00.000Z":"JORDINLAINE",
+            "2021-11-21T20:00:00.000Z":"ANNACARMELA",
+            "2021-11-21T22:00:00.000Z":"JULIENBELHUMEUR",
+            "2021-11-22T00:00:00.000Z":"GABISTREAMS",
+            "2021-11-22T02:00:00.000Z":"SYDNEYPRAGUE",
+            "2021-11-22T04:00:00.000Z":"JONLIMUSIC"
         }
     },
     methods: {
         StringDate(date) {
-            start = new Date(parseInt(date))
-            end = new Date(parseInt(date) + 7200000)
+            start = new Date(date)
+            end = new Date(new Date(date) + 7200000)
             // ${date.toLocaleString('en-US',{ weekday: 'short', day: 'numeric'})}
             return `${start.toLocaleString('en-GB',{ weekday: 'long'})} ${start.toLocaleTimeString('en-GB', { hour: 'numeric', minute: '2-digit', hour12: true })} / ${end.toLocaleString('en-GB',{ weekday: 'long'})} ${end.toLocaleTimeString('en-GB', { hour: 'numeric', minute: '2-digit', hour12: true })}`
         },
@@ -40,11 +40,11 @@ var app = new Vue({
     watch: {
         time: function (d) {
             setTimeout(function () {
-                app.time = new Date(1637431200000 - new Date().getTime()).toLocaleTimeString('en-US', { hour: '2-digit',minute: '2-digit',second: '2-digit', hour12: false })                
+                app.time = new Date(new Date("2021-11-20T18:00:00.000Z") - new Date().getTime()).toLocaleTimeString('en-US', { hour: '2-digit',minute: '2-digit',second: '2-digit', hour12: false })                
             },1000)
         }
     },
     created: function () {
-        this.time = new Date(1637431200000 - new Date().getTime()).toLocaleTimeString('en-US', { hour: '2-digit',minute: '2-digit',second: '2-digit', hour12: false }) 
+        this.time = new Date(new Date("2021-11-20T18:00:00.000Z") - new Date().getTime()).toLocaleTimeString('en-US', { hour: '2-digit',minute: '2-digit',second: '2-digit', hour12: false }) 
     }
 })

@@ -22,7 +22,7 @@
                     <li>Emo</li>
                 </ul>
             </h1>
-            <h2>{{new Date(eventStart).toLocaleString('en-GB',{ weekday: 'short', month: 'short', day: 'numeric'})}} / {{new Date(eventEnd).toLocaleString('en-GB',{ weekday: 'short', month: 'short', day: 'numeric'})}}</h2>
+            <h2>{{eventStart.toLocaleString('en-GB',{ weekday: 'short', month: 'short', day: 'numeric'})}} / {{eventEnd.toLocaleString('en-GB',{ weekday: 'short', month: 'short', day: 'numeric'})}}</h2>
             <h4>20<span style="color: green">21 (puns)</span></h4>
             <!-- <h2> the event will start in {{time}}</h2> -->
         </header>
@@ -38,7 +38,7 @@
                 </div>
             </div>
         </main>
-        <footer><p>Created by Mich</p></footer>
+        <footer>Created by Mich</footer>
     </div>
     <script src="/main.js"></script>
 </body>
