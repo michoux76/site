@@ -2,8 +2,8 @@ var app = new Vue({
     el: '#app',
     data: {
         msg: 'Hello',
-        eventStart: new Date(Date.parse("2021-11-20T18:00:00.000Z")),
-        eventEnd: new Date(Date.parse("2021-11-22T06:00:00.000Z")),
+        eventStart: new Date("2021-11-20T18:00:00.000Z"),
+        eventEnd: new Date("2021-11-22T06:00:00.000Z"),
         time:'00:00:00',
         schedule: {
             "2021-11-20T18:00:00.000Z":"KELLYGATES47",
@@ -28,8 +28,8 @@ var app = new Vue({
     },
     methods: {
         StringDate(date) {
-            start = new Date(Date.parse(date))
-            end = new Date(new Date(Date.parse(date)).getTime() + 7200000)
+            start = new Date(date)
+            end = new Date(new Date(date).getTime() + 7200000)
             // ${date.toLocaleString('en-US',{ weekday: 'short', day: 'numeric'})}
             return `${start.toLocaleString('en-GB',{ weekday: 'long'})} ${start.toLocaleTimeString('en-GB', { hour: 'numeric', minute: '2-digit', hour12: true })} / ${end.toLocaleString('en-GB',{ weekday: 'long'})} ${end.toLocaleTimeString('en-GB', { hour: 'numeric', minute: '2-digit', hour12: true })}`
         },
@@ -40,11 +40,11 @@ var app = new Vue({
     watch: {
         time: function (d) {
             setTimeout(function () {
-                app.time = new Date(Date.parse("2021-11-20T18:00:00.000Z") - new Date().getTime()).toLocaleTimeString('en-US', { hour: '2-digit',minute: '2-digit',second: '2-digit', hour12: false })                
+                app.time = new Date(new Date("2021-11-20T18:00:00.000Z") - new Date().getTime()).toLocaleTimeString('en-US', { hour: '2-digit',minute: '2-digit',second: '2-digit', hour12: false })                
             },1000)
         }
     },
     created: function () {
-        this.time = new Date(Date.parse("2021-11-20T18:00:00.000Z") - new Date().getTime()).toLocaleTimeString('en-US', { hour: '2-digit',minute: '2-digit',second: '2-digit', hour12: false }) 
+        this.time = new Date(new Date("2021-11-20T18:00:00.000Z") - new Date().getTime()).toLocaleTimeString('en-US', { hour: '2-digit',minute: '2-digit',second: '2-digit', hour12: false }) 
     }
 })
