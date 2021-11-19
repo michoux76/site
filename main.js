@@ -63,7 +63,7 @@ var app = new Vue({
             start = new Date(date)
             end = new Date(new Date(date).getTime() + 7200000)
             // ${date.toLocaleString('en-US',{ weekday: 'short', day: 'numeric'})}
-            return `${start.toLocaleString('en-GB',{ weekday: 'long'})} ${start.toLocaleTimeString('en-GB', { hour: 'numeric', minute: '2-digit', hour12: true })} / ${end.toLocaleString('en-GB',{ weekday: 'long'})} ${end.toLocaleTimeString('en-GB', { hour: 'numeric', minute: '2-digit', hour12: true })}`
+            return `${start.toLocaleString('en-GB',{ weekday: 'long'})} ${start.toLocaleTimeString('en-GB', { hour: 'numeric', minute: '2-digit', hour12: true })} | ${end.toLocaleString('en-GB',{ weekday: 'long'})} ${end.toLocaleTimeString('en-GB', { hour: 'numeric', minute: '2-digit', hour12: true })}`
         },
         open(name) {
             window.open('https://www.twitch.tv/'+name,'_blank')
