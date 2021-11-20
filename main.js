@@ -1,27 +1,17 @@
 function countDown() {
-
     var countDownDate = new Date("2021-11-20T18:00:00.000Z").getTime();
-    // Get today's date and time
     var now = new Date().getTime();
-  
-    // Find the distance between now and the count down date
     var distance = countDownDate - now;
-  
-    // Time calculations for days, hours, minutes and seconds
     var days = Math.floor(distance / (1000 * 60 * 60 * 24));
     var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
     var str = "THE RAID TRAIN <br>STARS IN ";
-
-    str += `${("00"+hours).slice(-2)}h ${("00"+minutes).slice(-2)}m ${("00"+seconds).slice(-2)}s`
-  
-    // If the count down is finished, write some text
+    str += `${("00"+hours).slice(-2)}h ${("00"+minutes).slice(-2)}m ${("00"+seconds).slice(-2)}s`;
     if (distance < 0) {
-      return "STARTED";
+        return "STARTED";
     } else {
-    return str
+        return str
     }
   }
 
@@ -57,7 +47,6 @@ var app = new Vue({
         StringDate(date) {
             start = new Date(date)
             end = new Date(new Date(date).getTime() + 7200000)
-            // ${date.toLocaleString('en-US',{ weekday: 'short', day: 'numeric'})}
             return `${start.toLocaleString('en-GB',{ weekday: 'long'})} ${start.toLocaleTimeString('en-GB', { hour: 'numeric', minute: '2-digit', hour12: true })} | ${end.toLocaleString('en-GB',{ weekday: 'long'})} ${end.toLocaleTimeString('en-GB', { hour: 'numeric', minute: '2-digit', hour12: true })}`
         },
         open(name) {

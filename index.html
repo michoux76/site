@@ -21,6 +21,9 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
 </head>
 <body>
+    <!-- 
+        What are you looking for ? *sit*
+    -->
     <div id="app">
         <header>
             <h1>
@@ -32,7 +35,6 @@
             </h1>
             <h2>{{eventStart.toLocaleString('en-GB',{ weekday: 'short', month: 'short', day: 'numeric'})}} / {{eventEnd.toLocaleString('en-GB',{ weekday: 'short', month: 'short', day: 'numeric'})}}</h2>
             <h4>20<span style="color: green">21 (puns)</span></h4>
-            <!-- <h2> the event will start in {{time}}</h2> -->
         </header>
         <main>
             <div class="container">
