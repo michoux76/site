@@ -24,6 +24,7 @@ a {
     left: 0;
     right: 0;
     bottom: 0;
+    overflow: hidden;
 }
 
 header, footer {
@@ -103,4 +104,65 @@ h2 {
 
 .card h3 {
     font-family: 'Finger Paint', cursive;
+}
+
+.stream .streamTitle span {
+    display: inline-block;
+    padding: 0.3em;
+    line-height: 1;
+    background-color: #dd0083;
+    color: white
+}
+
+.stream main {
+    flex: 1 1 auto;
+    margin: 0;
+    display: flex;
+    overflow: auto;
+
+}
+.stream aside.sidebar {
+    flex: 0 0 300px;
+    overflow: auto;
+}
+.stream aside.sidebar h2 {
+    text-align: center;
+}
+.stream aside.sidebar ul {
+    overflow: auto;
+    list-style: none;
+    padding: 0;
+    overflow: auto;
+}
+
+.stream aside.sidebar li {
+    padding: 5px 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.stream aside.sidebar li span:first-of-type {
+    text-align: center;
+    text-transform: uppercase;
+    width: 45px;
+}
+
+.stream aside.sidebar li span:not(:first-of-type) {
+    margin-left: 10px;
+    flex: 1 1 auto;
+}
+
+.stream aside.sidebar li:hover, .stream aside.sidebar li.active {
+    background-color: #dd0083;
+    color: white;
+}
+
+.stream aside.content {
+    flex: 1 1 auto;
+}
+
+#twitch-embed {
+    width: 100%;
+    height: 100%;
 }

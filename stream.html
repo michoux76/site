@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Twitch Goes Emo - Live</title>
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Twitch Goes Emo - Live" />
+    <meta name="twitter:description" content="Watch the event from one place" />
+    <meta name="twitter:image" content="https://cdn.discordapp.com/attachments/857471316126203904/911270361612570684/TWITCHGOESEMO3_IGfeed.png" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Twitch Goes Emo - Schedule" />
+    <meta property="og:description" content="Watch the event from one place" />
+    <meta property="og:url" content="https://www.michoux.gifts/" />
+    <meta property="og:image" content="https://cdn.discordapp.com/attachments/857471316126203904/911270361612570684/TWITCHGOESEMO3_IGfeed.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">    
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+    <script src="https://embed.twitch.tv/embed/v1.js"></script>
+</head>
+<body class="stream">
+    <div id="app">
+        <header>
+            <h1>
+                <ul class="title">
+                    <li>Twitch</li>
+                    <li>Goes</li>
+                    <li>Emo</li>
+                </ul>
+            </h1>
+            <h2>{{eventStart.toLocaleString('en-GB',{ weekday: 'short', month: 'short', day: 'numeric'})}} / {{eventEnd.toLocaleString('en-GB',{ weekday: 'short', month: 'short', day: 'numeric'})}}</h2>
+        </header>
+        <main>
+            <aside class="sidebar">
+                <h2>LINE UP</h2>
+                <ul>
+                    <li v-for="stream, date in schedule" @click="setStream(stream)" v-html="sideTime(date,stream)" :class="{active: currentStream.toLowerCase() === stream.toLowerCase()}"></li>
+                </ul>
+            </aside>
+            <aside class="content">
+                <!-- <h3 class="streamTitle"><span>Upcoming emo : {{currentStream}}</span></h3> -->
+                <div id="twitch-embed"></div>
+            </aside>
+        </main>
+        <footer>Made by Mich | Organized by <a href="https://www.Twitch.tv/SabySpark" target="_blank">SabySpark</a> & <a href="https://www.Twitch.tv/annacarmela" target="_blank">AnnaCarmela</a></footer>        
+    </div>
+    <!-- Load the Twitch embed JavaScript file -->
+    <script src="/main.js"></script>
+</body>
+</html>
