@@ -51,6 +51,10 @@ var app = new Vue({
         },
         open(name) {
             window.open('https://www.twitch.tv/'+name,'_blank')
+        },
+        disable(date) {
+            date = new Date(new Date(date).getTime() + 7200000)
+            return date.getTime() <= new Date().getTime()
         }
     },
     watch: {

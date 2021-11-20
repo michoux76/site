@@ -96,6 +96,11 @@ h2 {
     color: white
 }
 
+.card.disabled {
+    background-color: gray !important;
+    color: black !important;
+}
+
 .card h3 {
     font-family: 'Finger Paint', cursive;
 }

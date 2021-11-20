@@ -35,13 +35,14 @@
             </h1>
             <h2>{{eventStart.toLocaleString('en-GB',{ weekday: 'short', month: 'short', day: 'numeric'})}} / {{eventEnd.toLocaleString('en-GB',{ weekday: 'short', month: 'short', day: 'numeric'})}}</h2>
             <h4>20<span style="color: green">21 (puns)</span></h4>
+            <h3>Click the cards to open channels</h3>
         </header>
         <main>
             <div class="container">
                 <div class="card">
                     <h3 v-html=time></h3>
                 </div>
-                <div class="card" v-for="name,time in schedule" @click="open(name)">
+                <div class="card" v-for="name,time in schedule" @click="open(name)" :class="{disabled: disable(time)}">
                     <h3>{{name}}</h3>
                     <h4><i>{{StringDate(time)}}</i></h4>
                 </div>
