@@ -88,13 +88,14 @@ h2 {
     box-shadow: 0 0 2px #dd0083;
     padding: 25px;
     font-size: 1.2em;
-    cursor: pointer;
     transition: color ease-in-out .2s, background-color ease-in-out .2s;
 }
 
 .card:hover {
     background-color: #dd0083;
-    color: white
+    color: white;
+    cursor: pointer;
+
 }
 
 .card.disabled {
