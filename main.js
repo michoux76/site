@@ -94,7 +94,11 @@ var app = new Vue({
 app.twPlayer = new Twitch.Embed("twitch-embed", {
     width: '100%',
     height: '100%',
-    channel: 'michouxgifts',
+    channel: Object.entries(app.schedule).find(e=>(new Date(e[0]).getTime()) >= (new Date().getTime()))[1].toLowerCase(),
     // Only needed if this page is going to be embedded on other websites
     parent: ["127.0.0.1", "www.michoux.gifts"]
 })
+
+app.twPlayer.addEventListener(Twitch.Embed.VIDEO_READY, function() {
+    app.currentStream = app.twPlayer.getChannel()
+});
